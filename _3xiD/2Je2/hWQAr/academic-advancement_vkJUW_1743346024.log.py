@@ -34,7 +34,6 @@ sex= st.selectbox('Choose sex  0: Female     1: Male', [0,1])
 smoking= st.selectbox('Does the patient smoke? 0: No     1: yes', [0,1])
 time= st.number_input('Follow-up period (days)')
 
-def predict(): 
     row = np.array([age,anaemia,creatinine_phosphokinase,diabetes,ejection_fraction,high_blood_pressure,platelets,serum_creatinine,serum_sodium,sex,smoking, time]) 
     X = pd.DataFrame([row], columns = columns)
     p_x= preprocessor(X)
